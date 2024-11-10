@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Elle-est-programmeur(Shreyas)
+- 👋 Hi, I’m TechZenith!
 - 👀 I’m interested in Machine learning, Data Science and Generative AI.
 - 🌱 I’m currently learning Data Structures and Algorithm
 - 💞️ I’m looking to collaborate on ...
