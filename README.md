@@ -1,12 +1,18 @@
-- 👋 Hi, I’m TechZenith!
-- 👀 I’m interested in Machine learning, Data Science and Generative AI.
-- 🌱 I’m currently learning Data Structures and Algorithm
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me https://www.linkedin.com/in/shreyas-s-548b9a282?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BUBh8mkcrQkG8N%2F6m4p3KRw%3D%3D
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+# 💫 About Me:
+👨‍🎓 I am currently pursuing Computer Science Engineering at Ramaiah Institute of Technology.<br><br>🚀 I'm SHREYAS, a passionate software developer.
 
-<!---
-Elle-est-programmeur/Elle-est-programmeur is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+
+# 💻 Tech Stack:
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=plastic&logo=c&logoColor=white) ![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=plastic&logo=graphql&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=plastic&logo=javascript&logoColor=%23F7DF1E) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=plastic&logo=openjdk&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=plastic&logo=html5&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=plastic&logo=python&logoColor=ffdd54) ![Scala](https://img.shields.io/badge/scala-%23DC322F.svg?style=plastic&logo=scala&logoColor=white) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=plastic&logo=netlify&logoColor=#00C7B7) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=plastic&logo=vercel&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=plastic&logo=amazon-aws&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=plastic&logo=firebase) ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=plastic&logo=render&logoColor=white) ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=plastic&logo=django&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=plastic&logo=fastapi) ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=plastic&logo=spring&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=plastic&logo=react&logoColor=%2361DAFB) ![ApacheCassandra](https://img.shields.io/badge/cassandra-%231287B1.svg?style=plastic&logo=apache-cassandra&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=plastic&logo=firebase&logoColor=ffcd34) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=plastic&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=plastic&logo=mysql&logoColor=white) ![Neo4J](https://img.shields.io/badge/Neo4j-008CC1?style=plastic&logo=neo4j&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=plastic&logo=supabase&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=plastic&logo=postgresql&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=plastic&logo=Matplotlib&logoColor=black) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=plastic&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=plastic&logo=pandas&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=plastic&logo=scikit-learn&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=plastic&logo=postman&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=plastic&logo=docker&logoColor=white)
+# 📊 GitHub Stats:
+![](https://github-readme-stats.vercel.app/api?username=Elle-est-programmeur&theme=gruvbox&hide_border=false&include_all_commits=false&count_private=false)<br/>
+![](https://nirzak-streak-stats.vercel.app/?user=Elle-est-programmeur&theme=gruvbox&hide_border=false)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=Elle-est-programmeur&theme=gruvbox&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+
+### ✍️ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=gruvbox)
+
+---
+[![](https://visitcount.itsvg.in/api?id=Elle-est-programmeur&icon=2&color=0)](https://visitcount.itsvg.in)
+
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
