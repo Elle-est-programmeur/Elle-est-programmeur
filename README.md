@@ -4,6 +4,13 @@
   <img alt="Shreyas's GitHub profile banner" src="https://raw.githubusercontent.com/Elle-est-programmeur/Elle-est-programmeur/main/light_mode.svg">
 </picture>
 
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://github.com/Elle-est-programmeur"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://leetcode.com/u/Phoenix1808/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
+  <img src="https://komarev.com/ghpvc/?username=Elle-est-programmeur&color=blueviolet&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile views" />
+</p>
+
 ### `$ whoami`
 
 ```bash
@@ -16,40 +23,35 @@ $ cat about.txt
 - Junior Core Member at CodeRIT, MSRIT's official coding club
 ```
 
+```json
+{
+  "education": "B.E. Computer Science & Engineering (AI/ML), Ramaiah Institute of Technology, Bengaluru (2023-2027)",
+  "role": "Software Engineer Intern @ Hampi Labs",
+  "building": "Multi-tenant Hotel Management backend in Spring Boot 4.0",
+  "focus": ["Kafka", "RabbitMQ", "Redis caching", "load balancing", "monoliths vs. microservices", "agentic RAG (LangChain / LangGraph)"],
+  "current_projects": ["TradeSentry", "MediSureAI", "HelpLens", "Gmail AI Reply Extension"]
+}
+```
+
 ---
 
 ### `$ ls skills/`
 
-```bash
-$ ls skills/
-```
-
 **Languages**
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+
+<img src="https://skillicons.dev/icons?i=java,c,js,py" alt="Languages" />
 
 **Backend & APIs**
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
-![Spring Security](https://img.shields.io/badge/Spring%20Security-6DB33F?style=flat-square&logo=spring&logoColor=white)
-![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-6DB33F?style=flat-square&logo=spring&logoColor=white)
-![gRPC](https://img.shields.io/badge/gRPC-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white)
-![Kafka](https://img.shields.io/badge/Apache%20Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
+
+<img src="https://skillicons.dev/icons?i=spring,grpc,kafka" alt="Backend & APIs" />
 
 **Databases**
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![Neo4j](https://img.shields.io/badge/Neo4j-4581C3?style=flat-square&logo=neo4j&logoColor=white)
+
+<img src="https://skillicons.dev/icons?i=postgres,mongodb,mysql,redis,neo4j" alt="Databases" />
 
 **Cloud & DevOps**
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
-![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=flat-square&logo=railway&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+
+<img src="https://skillicons.dev/icons?i=docker,aws,git" alt="Cloud & DevOps" />
 
 ---
 
@@ -66,6 +68,14 @@ MediSureAI was published at SYNERGY 2026 (IC-SIIT) and is set to appear in a Sco
 
 ---
 
+### `$ cat trophies.log`
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Elle-est-programmeur&theme=dark&no-frame=true&row=1&column=6" alt="GitHub trophies" />
+</p>
+
+---
+
 ### `$ git log --stat`
 
 <p align="center">
@@ -77,12 +87,20 @@ MediSureAI was published at SYNERGY 2026 (IC-SIIT) and is set to appear in a Sco
 </p>
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Elle-est-programmeur&show_icons=true&theme=default&hide_border=true" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Elle-est-programmeur&layout=compact&hide_border=true" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Elle-est-programmeur&show_icons=true&theme=dark&hide_border=true" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Elle-est-programmeur&layout=compact&hide_border=true&theme=dark" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Elle-est-programmeur&hide_border=true" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Elle-est-programmeur&hide_border=true&theme=dark" />
+</p>
+
+---
+
+### `$ cat activity.log`
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Elle-est-programmeur&theme=github-dark" alt="Contribution activity graph" />
 </p>
 
 ---
@@ -102,7 +120,7 @@ MediSureAI was published at SYNERGY 2026 (IC-SIIT) and is set to appear in a Sco
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](#)
 
 <!--
-Replace the LinkedIn "#" above with your actual profile URL.
+Replace the LinkedIn "#" above (and the LinkedIn badge in the hero row) with your actual profile URL.
 The top banner regenerates daily via .github/workflows/build.yml (today.py).
 The snake animation regenerates daily via .github/workflows/snake.yml and
 publishes to the "output" branch - that branch is created automatically
