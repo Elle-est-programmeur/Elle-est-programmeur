@@ -1,0 +1,121 @@
+<svg width="760" height="210" viewBox="0 0 760 210" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #0a0e0a; }
+    .titlebar { fill: #161c16; }
+    .border { fill: none; stroke: #1f2a1f; stroke-width: 1; }
+    .titletext {
+      font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+      font-size: 12px;
+      fill: #6b8f6b;
+    }
+    .prompt {
+      font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+      font-size: 14px;
+      fill: #6b8f6b;
+    }
+    .name {
+      font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+      font-size: 28px;
+      font-weight: 700;
+      fill: #39ff14;
+    }
+    .role {
+      font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+      font-size: 16px;
+      fill: #00ff41;
+      opacity: 0;
+    }
+    .meta {
+      font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+      font-size: 13px;
+      fill: #6b8f6b;
+    }
+    .ticker-track {
+      font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+      font-size: 13px;
+      fill: #6b8f6b;
+      animation: scroll 18s linear infinite;
+    }
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .cursor {
+      fill: #00ff41;
+      animation: blink 1s steps(1) infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    
+    .role-0 {
+      animation: role-0-cycle 16s ease-in-out infinite;
+    }
+    @keyframes role-0-cycle {
+      0% { opacity: 0; }
+      0.00% { opacity: 0; }
+      3.00% { opacity: 1; }
+      22.00% { opacity: 1; }
+      25.00% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    .role-1 {
+      animation: role-1-cycle 16s ease-in-out infinite;
+    }
+    @keyframes role-1-cycle {
+      0% { opacity: 0; }
+      25.00% { opacity: 0; }
+      28.00% { opacity: 1; }
+      47.00% { opacity: 1; }
+      50.00% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    .role-2 {
+      animation: role-2-cycle 16s ease-in-out infinite;
+    }
+    @keyframes role-2-cycle {
+      0% { opacity: 0; }
+      50.00% { opacity: 0; }
+      53.00% { opacity: 1; }
+      72.00% { opacity: 1; }
+      75.00% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    .role-3 {
+      animation: role-3-cycle 16s ease-in-out infinite;
+    }
+    @keyframes role-3-cycle {
+      0% { opacity: 0; }
+      75.00% { opacity: 0; }
+      78.00% { opacity: 1; }
+      97.00% { opacity: 1; }
+      100.00% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+  </style>
+
+  <rect class="bg" width="760" height="210" rx="10" />
+  <path class="titlebar" d="M0 10 A10 10 0 0 1 10 0 L750 0 A10 10 0 0 1 760 10 L760 30 L0 30 Z" />
+  <circle cx="22" cy="15" r="6" fill="#ff5f56" />
+  <circle cx="42" cy="15" r="6" fill="#ffbd2e" />
+  <circle cx="62" cy="15" r="6" fill="#27c93f" />
+  <text x="380" y="19" text-anchor="middle" class="titletext">shreyas@bengaluru: ~</text>
+  <rect class="border" x="0.5" y="0.5" width="759" height="209" rx="10" />
+
+  <clipPath id="ticker-clip">
+    <rect x="30" y="42" width="700" height="18" />
+  </clipPath>
+  <g clip-path="url(#ticker-clip)">
+    <text x="30" y="55" class="ticker-track">Java    /    Spring Boot    /    Kafka    /    gRPC    /    PostgreSQL    /    Redis    /    Docker    /    React    /    Spring AI    /    AWS    /    Java    /    Spring Boot    /    Kafka    /    gRPC    /    PostgreSQL    /    Redis    /    Docker    /    React    /    Spring AI    /    AWS</text>
+  </g>
+
+  <text x="30" y="88" class="prompt">$ whoami</text>
+  <text x="30" y="120" class="name">Shreyas<tspan class="cursor">_</tspan></text>
+
+  <text x="30" y="150" class="role role-0">&gt; Backend Engineer in training</text><text x="30" y="150" class="role role-1">&gt; Spring Boot / Kafka / Distributed Systems</text><text x="30" y="150" class="role role-2">&gt; CSE (AI/ML) @ RIT Bengaluru</text><text x="30" y="150" class="role role-3">&gt; 650+ DSA problems solved</text>
+
+  <line x1="30" y1="166" x2="730" y2="166" stroke="#1f2a1f" stroke-width="1" />
+
+  <text x="30" y="188" class="meta">Bengaluru, India   |   Software Engineer Intern, Hampi Labs</text>
+  <text x="30" y="206" class="meta">Monday, 20 July 2026</text>
+</svg>
