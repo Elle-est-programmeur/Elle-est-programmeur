@@ -90,20 +90,8 @@ MediSureAI was published at SYNERGY 2026 (IC-SIIT) and is set to appear in a Sco
 ### `$ cat leetcode.log`
 
 <p align="center">
-  <img src="https://leetcard.jacoblin.cool/Phoenix1808?ext=heatmap" alt="LeetCode heatmap" />
+  <img src="https://leetcard.jacoblin.cool/Phoenix1808?ext=heatmap&theme=dark" alt="LeetCode rating and heatmap" />
 </p>
-
-<p align="center">
-  <img src="https://leetcard.jacoblin.cool/Phoenix1808?ext=contest" alt="LeetCode contest rating history" />
-</p>
-
----
-
-### `$ cat achievements.log`
-
-- 4th place, 22 Yards of Cricket (CodeRIT, RIT Bengaluru), 150+ teams
-- 5th place, Eco-Hack (Comedkares Innovation Hub, Bengaluru), 200+ teams
-- 75th out of 3000+ teams, K! Hacks 2.0 Ideathon (Anna University, Chennai)
 
 ---
 

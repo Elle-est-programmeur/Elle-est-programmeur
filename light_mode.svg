@@ -1,121 +1,235 @@
 <svg width="760" height="210" viewBox="0 0 760 210" xmlns="http://www.w3.org/2000/svg">
   <style>
-    .bg { fill: #0a0e0a; }
-    .titlebar { fill: #161c16; }
-    .border { fill: none; stroke: #1f2a1f; stroke-width: 1; }
-    .titletext {
-      font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
-      font-size: 12px;
-      fill: #6b8f6b;
-    }
-    .prompt {
-      font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
-      font-size: 14px;
-      fill: #6b8f6b;
-    }
+    .bg { fill: #050805; }
+    .titlebar { fill: #0d130d; }
+    .border { fill: none; stroke: #153015; stroke-width: 1; }
+    .titletext { font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size: 12px; fill: #4f7a4f; }
+    .prompt { font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size: 14px; fill: #4f7a4f; }
     .name {
       font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
       font-size: 28px;
       font-weight: 700;
-      fill: #39ff14;
-    }
-    .role {
-      font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
-      font-size: 16px;
       fill: #00ff41;
-      opacity: 0;
     }
-    .meta {
+    .role { font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size: 16px; fill: #7dff9a; opacity: 0; }
+    .meta { font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size: 13px; fill: #4f7a4f; }
+    .rain {
       font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
-      font-size: 13px;
-      fill: #6b8f6b;
+      fill: #2fbf3f;
+      opacity: 0.28;
+      animation-name: fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
     }
+    @keyframes fall {
+      0%   { transform: translateY(-115%); opacity: 0; }
+      8%   { opacity: 0.30; }
+      92%  { opacity: 0.30; }
+      100% { transform: translateY(105%); opacity: 0; }
+    }
+    .stream { font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace; fill: #4f7a4f; }
     .ticker-track {
       font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
       font-size: 13px;
-      fill: #6b8f6b;
+      fill: #4f7a4f;
       animation: scroll 18s linear infinite;
     }
     @keyframes scroll {
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }
     }
-    .cursor {
-      fill: #00ff41;
-      animation: blink 1s steps(1) infinite;
+    .cursor { fill: #00ff41; animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    /* Glitch: quick horizontal jitter + colour split on the name. */
+    .glitch { animation: glitch 4.5s steps(1) infinite; }
+    @keyframes glitch {
+      0%, 92%, 100% { transform: translate(0,0); }
+      93% { transform: translate(-2px, 1px); }
+      94% { transform: translate(2px, -1px); }
+      95% { transform: translate(-1px, 0); }
+      96% { transform: translate(1px, 1px); }
+      97% { transform: translate(0, 0); }
     }
-    @keyframes blink {
-      50% { opacity: 0; }
+    .glitch-r { fill: #ff2e88; opacity: 0; mix-blend-mode: screen; animation: gsplit 4.5s steps(1) infinite; }
+    .glitch-b { fill: #22d3ff; opacity: 0; mix-blend-mode: screen; animation: gsplit 4.5s steps(1) infinite; animation-delay: 0.04s; }
+    @keyframes gsplit {
+      0%, 92%, 100% { opacity: 0; transform: translate(0,0); }
+      93% { opacity: 0.8; transform: translate(-3px, 0); }
+      95% { opacity: 0.8; transform: translate(3px, 0); }
+      97% { opacity: 0; transform: translate(0,0); }
+    }
+    .scanline { animation: scan 6s linear infinite; }
+    @keyframes scan {
+      from { transform: translateY(-10px); }
+      to { transform: translateY(210px); }
+    }
+    .flicker { animation: flicker 3.5s ease-in-out infinite; }
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      48% { opacity: 1; }
+      50% { opacity: 0.82; }
+      52% { opacity: 1; }
+      70% { opacity: 0.9; }
     }
     
     .role-0 {
-      animation: role-0-cycle 16s ease-in-out infinite;
+      animation: role-0-cycle 12s ease-in-out infinite;
     }
     @keyframes role-0-cycle {
       0% { opacity: 0; }
       0.00% { opacity: 0; }
-      3.00% { opacity: 1; }
-      22.00% { opacity: 1; }
-      25.00% { opacity: 0; }
+      4.00% { opacity: 1; }
+      29.33% { opacity: 1; }
+      33.33% { opacity: 0; }
       100% { opacity: 0; }
     }
     .role-1 {
-      animation: role-1-cycle 16s ease-in-out infinite;
+      animation: role-1-cycle 12s ease-in-out infinite;
     }
     @keyframes role-1-cycle {
       0% { opacity: 0; }
-      25.00% { opacity: 0; }
-      28.00% { opacity: 1; }
-      47.00% { opacity: 1; }
-      50.00% { opacity: 0; }
+      33.33% { opacity: 0; }
+      37.33% { opacity: 1; }
+      62.67% { opacity: 1; }
+      66.67% { opacity: 0; }
       100% { opacity: 0; }
     }
     .role-2 {
-      animation: role-2-cycle 16s ease-in-out infinite;
+      animation: role-2-cycle 12s ease-in-out infinite;
     }
     @keyframes role-2-cycle {
       0% { opacity: 0; }
-      50.00% { opacity: 0; }
-      53.00% { opacity: 1; }
-      72.00% { opacity: 1; }
-      75.00% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    .role-3 {
-      animation: role-3-cycle 16s ease-in-out infinite;
-    }
-    @keyframes role-3-cycle {
-      0% { opacity: 0; }
-      75.00% { opacity: 0; }
-      78.00% { opacity: 1; }
-      97.00% { opacity: 1; }
+      66.67% { opacity: 0; }
+      70.67% { opacity: 1; }
+      96.00% { opacity: 1; }
       100.00% { opacity: 0; }
       100% { opacity: 0; }
     }
   </style>
 
+  <defs>
+    <clipPath id="panel-clip"><rect x="0" y="30" width="760" height="180" /></clipPath>
+    <clipPath id="ticker-clip"><rect x="30" y="42" width="700" height="18" /></clipPath>
+    <radialGradient id="vign" cx="50%" cy="45%" r="75%">
+      <stop offset="60%" stop-color="#050805" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.55" />
+    </radialGradient>
+    <linearGradient id="scanfade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00ff41" stop-opacity="0" />
+      <stop offset="50%" stop-color="#00ff41" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#00ff41" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
   <rect class="bg" width="760" height="210" rx="10" />
+
+  <!-- Matrix rain + data streams behind the content -->
+  <g clip-path="url(#panel-clip)">
+<text class="rain" font-size="13" style="animation-duration:4.53s;animation-delay:-0.50s"><tspan x="8" dy="15" fill="#00ff41">&amp;</tspan><tspan x="8" dy="15" fill="#2fbf3f">ｳ</tspan><tspan x="8" dy="15" fill="#2fbf3f">7</tspan><tspan x="8" dy="15" fill="#2fbf3f">#</tspan><tspan x="8" dy="15" fill="#2fbf3f">B</tspan><tspan x="8" dy="15" fill="#2fbf3f">F</tspan><tspan x="8" dy="15" fill="#2fbf3f">1</tspan><tspan x="8" dy="15" fill="#2fbf3f">A</tspan><tspan x="8" dy="15" fill="#2fbf3f">1</tspan><tspan x="8" dy="15" fill="#2fbf3f">|</tspan><tspan x="8" dy="15" fill="#2fbf3f">;</tspan><tspan x="8" dy="15" fill="#2fbf3f">6</tspan><tspan x="8" dy="15" fill="#2fbf3f">D</tspan><tspan x="8" dy="15" fill="#2fbf3f">&lt;</tspan><tspan x="8" dy="15" fill="#2fbf3f">]</tspan><tspan x="8" dy="15" fill="#2fbf3f">=</tspan><tspan x="8" dy="15" fill="#2fbf3f">ｴ</tspan></text>
+<text class="rain" font-size="13" style="animation-duration:3.62s;animation-delay:-1.74s"><tspan x="24" dy="15" fill="#00ff41">7</tspan><tspan x="24" dy="15" fill="#2fbf3f">ｸ</tspan><tspan x="24" dy="15" fill="#2fbf3f">}</tspan><tspan x="24" dy="15" fill="#2fbf3f">*</tspan><tspan x="24" dy="15" fill="#2fbf3f">]</tspan><tspan x="24" dy="15" fill="#2fbf3f">A</tspan><tspan x="24" dy="15" fill="#2fbf3f">7</tspan><tspan x="24" dy="15" fill="#2fbf3f">+</tspan><tspan x="24" dy="15" fill="#2fbf3f">:</tspan><tspan x="24" dy="15" fill="#2fbf3f">:</tspan><tspan x="24" dy="15" fill="#2fbf3f">0</tspan><tspan x="24" dy="15" fill="#2fbf3f">[</tspan><tspan x="24" dy="15" fill="#2fbf3f">D</tspan><tspan x="24" dy="15" fill="#2fbf3f">=</tspan><tspan x="24" dy="15" fill="#2fbf3f">[</tspan><tspan x="24" dy="15" fill="#2fbf3f">%</tspan><tspan x="24" dy="15" fill="#2fbf3f">0</tspan><tspan x="24" dy="15" fill="#2fbf3f">ｸ</tspan><tspan x="24" dy="15" fill="#2fbf3f">ｸ</tspan><tspan x="24" dy="15" fill="#2fbf3f">;</tspan><tspan x="24" dy="15" fill="#2fbf3f">&lt;</tspan><tspan x="24" dy="15" fill="#2fbf3f">0</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:5.64s;animation-delay:-0.45s"><tspan x="41" dy="14" fill="#00ff41">[</tspan><tspan x="41" dy="14" fill="#2fbf3f">A</tspan><tspan x="41" dy="14" fill="#2fbf3f">6</tspan><tspan x="41" dy="14" fill="#2fbf3f">1</tspan><tspan x="41" dy="14" fill="#2fbf3f">ｲ</tspan><tspan x="41" dy="14" fill="#2fbf3f">ｷ</tspan><tspan x="41" dy="14" fill="#2fbf3f">ｸ</tspan><tspan x="41" dy="14" fill="#2fbf3f">/</tspan><tspan x="41" dy="14" fill="#2fbf3f">A</tspan><tspan x="41" dy="14" fill="#2fbf3f">/</tspan><tspan x="41" dy="14" fill="#2fbf3f">E</tspan><tspan x="41" dy="14" fill="#2fbf3f">}</tspan><tspan x="41" dy="14" fill="#2fbf3f">$</tspan><tspan x="41" dy="14" fill="#2fbf3f">}</tspan><tspan x="41" dy="14" fill="#2fbf3f">ｱ</tspan><tspan x="41" dy="14" fill="#2fbf3f">ｳ</tspan></text>
+<text class="rain" font-size="11" style="animation-duration:3.93s;animation-delay:-3.03s"><tspan x="59" dy="13" fill="#00ff41">F</tspan><tspan x="59" dy="13" fill="#2fbf3f">*</tspan><tspan x="59" dy="13" fill="#2fbf3f">&lt;</tspan><tspan x="59" dy="13" fill="#2fbf3f">%</tspan><tspan x="59" dy="13" fill="#2fbf3f">ｷ</tspan><tspan x="59" dy="13" fill="#2fbf3f">8</tspan><tspan x="59" dy="13" fill="#2fbf3f">B</tspan><tspan x="59" dy="13" fill="#2fbf3f">A</tspan><tspan x="59" dy="13" fill="#2fbf3f">&amp;</tspan><tspan x="59" dy="13" fill="#2fbf3f">&lt;</tspan><tspan x="59" dy="13" fill="#2fbf3f">&lt;</tspan><tspan x="59" dy="13" fill="#2fbf3f">ｴ</tspan><tspan x="59" dy="13" fill="#2fbf3f">1</tspan><tspan x="59" dy="13" fill="#2fbf3f">+</tspan><tspan x="59" dy="13" fill="#2fbf3f">+</tspan></text>
+<text class="rain" font-size="13" style="animation-duration:8.43s;animation-delay:-7.51s"><tspan x="75" dy="15" fill="#00ff41">}</tspan><tspan x="75" dy="15" fill="#2fbf3f">7</tspan><tspan x="75" dy="15" fill="#2fbf3f">ｳ</tspan><tspan x="75" dy="15" fill="#2fbf3f">1</tspan><tspan x="75" dy="15" fill="#2fbf3f">$</tspan><tspan x="75" dy="15" fill="#2fbf3f">{</tspan><tspan x="75" dy="15" fill="#2fbf3f">D</tspan><tspan x="75" dy="15" fill="#2fbf3f">C</tspan><tspan x="75" dy="15" fill="#2fbf3f">E</tspan><tspan x="75" dy="15" fill="#2fbf3f">:</tspan><tspan x="75" dy="15" fill="#2fbf3f">:</tspan><tspan x="75" dy="15" fill="#2fbf3f">0</tspan><tspan x="75" dy="15" fill="#2fbf3f">}</tspan><tspan x="75" dy="15" fill="#2fbf3f">1</tspan><tspan x="75" dy="15" fill="#2fbf3f">&lt;</tspan><tspan x="75" dy="15" fill="#2fbf3f">6</tspan><tspan x="75" dy="15" fill="#2fbf3f">#</tspan><tspan x="75" dy="15" fill="#2fbf3f">ｳ</tspan><tspan x="75" dy="15" fill="#2fbf3f">ｷ</tspan></text>
+<text class="rain" font-size="13" style="animation-duration:8.24s;animation-delay:-1.95s"><tspan x="93" dy="15" fill="#00ff41">*</tspan><tspan x="93" dy="15" fill="#2fbf3f">6</tspan><tspan x="93" dy="15" fill="#2fbf3f">#</tspan><tspan x="93" dy="15" fill="#2fbf3f">&lt;</tspan><tspan x="93" dy="15" fill="#2fbf3f">ｴ</tspan><tspan x="93" dy="15" fill="#2fbf3f">ｸ</tspan><tspan x="93" dy="15" fill="#2fbf3f">&gt;</tspan><tspan x="93" dy="15" fill="#2fbf3f">E</tspan><tspan x="93" dy="15" fill="#2fbf3f">&lt;</tspan><tspan x="93" dy="15" fill="#2fbf3f">*</tspan><tspan x="93" dy="15" fill="#2fbf3f">&amp;</tspan><tspan x="93" dy="15" fill="#2fbf3f">$</tspan><tspan x="93" dy="15" fill="#2fbf3f">E</tspan><tspan x="93" dy="15" fill="#2fbf3f">0</tspan><tspan x="93" dy="15" fill="#2fbf3f">:</tspan><tspan x="93" dy="15" fill="#2fbf3f">ｸ</tspan><tspan x="93" dy="15" fill="#2fbf3f">#</tspan><tspan x="93" dy="15" fill="#2fbf3f">$</tspan><tspan x="93" dy="15" fill="#2fbf3f">D</tspan><tspan x="93" dy="15" fill="#2fbf3f">ｴ</tspan></text>
+<text class="rain" font-size="13" style="animation-duration:8.25s;animation-delay:-2.36s"><tspan x="114" dy="15" fill="#00ff41">|</tspan><tspan x="114" dy="15" fill="#2fbf3f">}</tspan><tspan x="114" dy="15" fill="#2fbf3f">ｵ</tspan><tspan x="114" dy="15" fill="#2fbf3f">/</tspan><tspan x="114" dy="15" fill="#2fbf3f">$</tspan><tspan x="114" dy="15" fill="#2fbf3f">ｷ</tspan><tspan x="114" dy="15" fill="#2fbf3f">ｴ</tspan><tspan x="114" dy="15" fill="#2fbf3f">1</tspan><tspan x="114" dy="15" fill="#2fbf3f">8</tspan><tspan x="114" dy="15" fill="#2fbf3f">0</tspan><tspan x="114" dy="15" fill="#2fbf3f">:</tspan><tspan x="114" dy="15" fill="#2fbf3f">1</tspan><tspan x="114" dy="15" fill="#2fbf3f">=</tspan><tspan x="114" dy="15" fill="#2fbf3f">ｳ</tspan><tspan x="114" dy="15" fill="#2fbf3f">F</tspan><tspan x="114" dy="15" fill="#2fbf3f">1</tspan><tspan x="114" dy="15" fill="#2fbf3f">]</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:8.06s;animation-delay:-4.79s"><tspan x="134" dy="14" fill="#00ff41">{</tspan><tspan x="134" dy="14" fill="#2fbf3f">ｸ</tspan><tspan x="134" dy="14" fill="#2fbf3f">ｲ</tspan><tspan x="134" dy="14" fill="#2fbf3f">A</tspan><tspan x="134" dy="14" fill="#2fbf3f">ｵ</tspan><tspan x="134" dy="14" fill="#2fbf3f">1</tspan><tspan x="134" dy="14" fill="#2fbf3f">C</tspan><tspan x="134" dy="14" fill="#2fbf3f">&amp;</tspan><tspan x="134" dy="14" fill="#2fbf3f">&gt;</tspan><tspan x="134" dy="14" fill="#2fbf3f">7</tspan><tspan x="134" dy="14" fill="#2fbf3f">9</tspan><tspan x="134" dy="14" fill="#2fbf3f">1</tspan><tspan x="134" dy="14" fill="#2fbf3f">1</tspan><tspan x="134" dy="14" fill="#2fbf3f">ｵ</tspan><tspan x="134" dy="14" fill="#2fbf3f">]</tspan><tspan x="134" dy="14" fill="#2fbf3f">/</tspan><tspan x="134" dy="14" fill="#2fbf3f">ｶ</tspan><tspan x="134" dy="14" fill="#2fbf3f">%</tspan></text>
+<text class="rain" font-size="11" style="animation-duration:6.61s;animation-delay:-4.07s"><tspan x="153" dy="13" fill="#00ff41">0</tspan><tspan x="153" dy="13" fill="#2fbf3f">F</tspan><tspan x="153" dy="13" fill="#2fbf3f">ｶ</tspan><tspan x="153" dy="13" fill="#2fbf3f">1</tspan><tspan x="153" dy="13" fill="#2fbf3f">1</tspan><tspan x="153" dy="13" fill="#2fbf3f">0</tspan><tspan x="153" dy="13" fill="#2fbf3f">%</tspan><tspan x="153" dy="13" fill="#2fbf3f">7</tspan><tspan x="153" dy="13" fill="#2fbf3f">F</tspan><tspan x="153" dy="13" fill="#2fbf3f">ｱ</tspan><tspan x="153" dy="13" fill="#2fbf3f">ｷ</tspan><tspan x="153" dy="13" fill="#2fbf3f">E</tspan><tspan x="153" dy="13" fill="#2fbf3f">1</tspan><tspan x="153" dy="13" fill="#2fbf3f">&lt;</tspan><tspan x="153" dy="13" fill="#2fbf3f">E</tspan><tspan x="153" dy="13" fill="#2fbf3f">ｳ</tspan><tspan x="153" dy="13" fill="#2fbf3f">[</tspan><tspan x="153" dy="13" fill="#2fbf3f">|</tspan><tspan x="153" dy="13" fill="#2fbf3f">0</tspan><tspan x="153" dy="13" fill="#2fbf3f">8</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:3.86s;animation-delay:-0.41s"><tspan x="174" dy="14" fill="#00ff41">*</tspan><tspan x="174" dy="14" fill="#2fbf3f">B</tspan><tspan x="174" dy="14" fill="#2fbf3f">|</tspan><tspan x="174" dy="14" fill="#2fbf3f">/</tspan><tspan x="174" dy="14" fill="#2fbf3f">:</tspan><tspan x="174" dy="14" fill="#2fbf3f">ｵ</tspan><tspan x="174" dy="14" fill="#2fbf3f">=</tspan><tspan x="174" dy="14" fill="#2fbf3f">1</tspan><tspan x="174" dy="14" fill="#2fbf3f">D</tspan><tspan x="174" dy="14" fill="#2fbf3f">[</tspan><tspan x="174" dy="14" fill="#2fbf3f">ｳ</tspan><tspan x="174" dy="14" fill="#2fbf3f">0</tspan><tspan x="174" dy="14" fill="#2fbf3f">6</tspan><tspan x="174" dy="14" fill="#2fbf3f">F</tspan><tspan x="174" dy="14" fill="#2fbf3f">B</tspan><tspan x="174" dy="14" fill="#2fbf3f">0</tspan></text>
+<text class="rain" font-size="13" style="animation-duration:7.13s;animation-delay:-5.42s"><tspan x="195" dy="15" fill="#00ff41">&lt;</tspan><tspan x="195" dy="15" fill="#2fbf3f">1</tspan><tspan x="195" dy="15" fill="#2fbf3f">ｱ</tspan><tspan x="195" dy="15" fill="#2fbf3f">ｲ</tspan><tspan x="195" dy="15" fill="#2fbf3f">7</tspan><tspan x="195" dy="15" fill="#2fbf3f">&gt;</tspan><tspan x="195" dy="15" fill="#2fbf3f">ｲ</tspan><tspan x="195" dy="15" fill="#2fbf3f">1</tspan><tspan x="195" dy="15" fill="#2fbf3f">}</tspan><tspan x="195" dy="15" fill="#2fbf3f">]</tspan><tspan x="195" dy="15" fill="#2fbf3f">ｳ</tspan><tspan x="195" dy="15" fill="#2fbf3f">;</tspan><tspan x="195" dy="15" fill="#2fbf3f">=</tspan><tspan x="195" dy="15" fill="#2fbf3f">1</tspan><tspan x="195" dy="15" fill="#2fbf3f">1</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:3.54s;animation-delay:-0.29s"><tspan x="214" dy="14" fill="#00ff41">]</tspan><tspan x="214" dy="14" fill="#2fbf3f">D</tspan><tspan x="214" dy="14" fill="#2fbf3f">C</tspan><tspan x="214" dy="14" fill="#2fbf3f">D</tspan><tspan x="214" dy="14" fill="#2fbf3f">#</tspan><tspan x="214" dy="14" fill="#2fbf3f">9</tspan><tspan x="214" dy="14" fill="#2fbf3f">&amp;</tspan><tspan x="214" dy="14" fill="#2fbf3f">%</tspan><tspan x="214" dy="14" fill="#2fbf3f">ｱ</tspan><tspan x="214" dy="14" fill="#2fbf3f">0</tspan><tspan x="214" dy="14" fill="#2fbf3f">&lt;</tspan><tspan x="214" dy="14" fill="#2fbf3f">&gt;</tspan><tspan x="214" dy="14" fill="#2fbf3f">&lt;</tspan><tspan x="214" dy="14" fill="#2fbf3f">&lt;</tspan><tspan x="214" dy="14" fill="#2fbf3f">%</tspan><tspan x="214" dy="14" fill="#2fbf3f">;</tspan><tspan x="214" dy="14" fill="#2fbf3f">0</tspan><tspan x="214" dy="14" fill="#2fbf3f">&amp;</tspan><tspan x="214" dy="14" fill="#2fbf3f">B</tspan></text>
+<text class="rain" font-size="13" style="animation-duration:3.52s;animation-delay:-3.11s"><tspan x="232" dy="15" fill="#00ff41">E</tspan><tspan x="232" dy="15" fill="#2fbf3f">ｳ</tspan><tspan x="232" dy="15" fill="#2fbf3f">B</tspan><tspan x="232" dy="15" fill="#2fbf3f">ｵ</tspan><tspan x="232" dy="15" fill="#2fbf3f">:</tspan><tspan x="232" dy="15" fill="#2fbf3f">&amp;</tspan><tspan x="232" dy="15" fill="#2fbf3f">1</tspan><tspan x="232" dy="15" fill="#2fbf3f">ｷ</tspan><tspan x="232" dy="15" fill="#2fbf3f">9</tspan><tspan x="232" dy="15" fill="#2fbf3f">6</tspan><tspan x="232" dy="15" fill="#2fbf3f">C</tspan><tspan x="232" dy="15" fill="#2fbf3f">ｵ</tspan><tspan x="232" dy="15" fill="#2fbf3f">*</tspan><tspan x="232" dy="15" fill="#2fbf3f">}</tspan><tspan x="232" dy="15" fill="#2fbf3f">:</tspan><tspan x="232" dy="15" fill="#2fbf3f">0</tspan><tspan x="232" dy="15" fill="#2fbf3f">1</tspan><tspan x="232" dy="15" fill="#2fbf3f">ｱ</tspan><tspan x="232" dy="15" fill="#2fbf3f">&amp;</tspan></text>
+<text class="rain" font-size="11" style="animation-duration:7.51s;animation-delay:-6.20s"><tspan x="248" dy="13" fill="#00ff41">/</tspan><tspan x="248" dy="13" fill="#2fbf3f">[</tspan><tspan x="248" dy="13" fill="#2fbf3f">:</tspan><tspan x="248" dy="13" fill="#2fbf3f">&lt;</tspan><tspan x="248" dy="13" fill="#2fbf3f">$</tspan><tspan x="248" dy="13" fill="#2fbf3f">0</tspan><tspan x="248" dy="13" fill="#2fbf3f">=</tspan><tspan x="248" dy="13" fill="#2fbf3f">=</tspan><tspan x="248" dy="13" fill="#2fbf3f">7</tspan><tspan x="248" dy="13" fill="#2fbf3f">1</tspan><tspan x="248" dy="13" fill="#2fbf3f">#</tspan><tspan x="248" dy="13" fill="#2fbf3f">&lt;</tspan><tspan x="248" dy="13" fill="#2fbf3f">*</tspan><tspan x="248" dy="13" fill="#2fbf3f">&amp;</tspan><tspan x="248" dy="13" fill="#2fbf3f">{</tspan><tspan x="248" dy="13" fill="#2fbf3f">|</tspan><tspan x="248" dy="13" fill="#2fbf3f">E</tspan><tspan x="248" dy="13" fill="#2fbf3f">1</tspan><tspan x="248" dy="13" fill="#2fbf3f">1</tspan><tspan x="248" dy="13" fill="#2fbf3f">B</tspan><tspan x="248" dy="13" fill="#2fbf3f">[</tspan><tspan x="248" dy="13" fill="#2fbf3f">ｲ</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:3.75s;animation-delay:-3.57s"><tspan x="269" dy="14" fill="#00ff41">;</tspan><tspan x="269" dy="14" fill="#2fbf3f">]</tspan><tspan x="269" dy="14" fill="#2fbf3f">ｲ</tspan><tspan x="269" dy="14" fill="#2fbf3f">ｷ</tspan><tspan x="269" dy="14" fill="#2fbf3f">6</tspan><tspan x="269" dy="14" fill="#2fbf3f">0</tspan><tspan x="269" dy="14" fill="#2fbf3f">ｸ</tspan><tspan x="269" dy="14" fill="#2fbf3f">{</tspan><tspan x="269" dy="14" fill="#2fbf3f">F</tspan><tspan x="269" dy="14" fill="#2fbf3f">B</tspan><tspan x="269" dy="14" fill="#2fbf3f">ｸ</tspan><tspan x="269" dy="14" fill="#2fbf3f">6</tspan><tspan x="269" dy="14" fill="#2fbf3f">6</tspan><tspan x="269" dy="14" fill="#2fbf3f">*</tspan><tspan x="269" dy="14" fill="#2fbf3f">{</tspan><tspan x="269" dy="14" fill="#2fbf3f">+</tspan><tspan x="269" dy="14" fill="#2fbf3f">9</tspan><tspan x="269" dy="14" fill="#2fbf3f">8</tspan><tspan x="269" dy="14" fill="#2fbf3f">ｱ</tspan><tspan x="269" dy="14" fill="#2fbf3f">=</tspan><tspan x="269" dy="14" fill="#2fbf3f">=</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:7.80s;animation-delay:-4.98s"><tspan x="290" dy="14" fill="#00ff41">8</tspan><tspan x="290" dy="14" fill="#2fbf3f">1</tspan><tspan x="290" dy="14" fill="#2fbf3f">0</tspan><tspan x="290" dy="14" fill="#2fbf3f">D</tspan><tspan x="290" dy="14" fill="#2fbf3f">/</tspan><tspan x="290" dy="14" fill="#2fbf3f">:</tspan><tspan x="290" dy="14" fill="#2fbf3f">D</tspan><tspan x="290" dy="14" fill="#2fbf3f">#</tspan><tspan x="290" dy="14" fill="#2fbf3f">ｶ</tspan><tspan x="290" dy="14" fill="#2fbf3f">ｴ</tspan><tspan x="290" dy="14" fill="#2fbf3f">;</tspan><tspan x="290" dy="14" fill="#2fbf3f">&lt;</tspan><tspan x="290" dy="14" fill="#2fbf3f">$</tspan><tspan x="290" dy="14" fill="#2fbf3f">;</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:5.34s;animation-delay:-4.09s"><tspan x="306" dy="14" fill="#00ff41">ｴ</tspan><tspan x="306" dy="14" fill="#2fbf3f">B</tspan><tspan x="306" dy="14" fill="#2fbf3f">|</tspan><tspan x="306" dy="14" fill="#2fbf3f">8</tspan><tspan x="306" dy="14" fill="#2fbf3f">1</tspan><tspan x="306" dy="14" fill="#2fbf3f">ｴ</tspan><tspan x="306" dy="14" fill="#2fbf3f">9</tspan><tspan x="306" dy="14" fill="#2fbf3f">1</tspan><tspan x="306" dy="14" fill="#2fbf3f">%</tspan><tspan x="306" dy="14" fill="#2fbf3f">6</tspan><tspan x="306" dy="14" fill="#2fbf3f">0</tspan><tspan x="306" dy="14" fill="#2fbf3f">=</tspan><tspan x="306" dy="14" fill="#2fbf3f">=</tspan><tspan x="306" dy="14" fill="#2fbf3f">6</tspan><tspan x="306" dy="14" fill="#2fbf3f">7</tspan><tspan x="306" dy="14" fill="#2fbf3f">ｴ</tspan><tspan x="306" dy="14" fill="#2fbf3f">1</tspan><tspan x="306" dy="14" fill="#2fbf3f">A</tspan></text>
+<text class="rain" font-size="11" style="animation-duration:5.76s;animation-delay:-5.00s"><tspan x="327" dy="13" fill="#00ff41">1</tspan><tspan x="327" dy="13" fill="#2fbf3f">ｶ</tspan><tspan x="327" dy="13" fill="#2fbf3f">ｲ</tspan><tspan x="327" dy="13" fill="#2fbf3f">+</tspan><tspan x="327" dy="13" fill="#2fbf3f">C</tspan><tspan x="327" dy="13" fill="#2fbf3f">ｷ</tspan><tspan x="327" dy="13" fill="#2fbf3f">1</tspan><tspan x="327" dy="13" fill="#2fbf3f">ｸ</tspan><tspan x="327" dy="13" fill="#2fbf3f">[</tspan><tspan x="327" dy="13" fill="#2fbf3f">B</tspan><tspan x="327" dy="13" fill="#2fbf3f">B</tspan><tspan x="327" dy="13" fill="#2fbf3f">ｸ</tspan><tspan x="327" dy="13" fill="#2fbf3f">7</tspan><tspan x="327" dy="13" fill="#2fbf3f">/</tspan><tspan x="327" dy="13" fill="#2fbf3f">0</tspan><tspan x="327" dy="13" fill="#2fbf3f">9</tspan><tspan x="327" dy="13" fill="#2fbf3f">C</tspan><tspan x="327" dy="13" fill="#2fbf3f">;</tspan><tspan x="327" dy="13" fill="#2fbf3f">1</tspan></text>
+<text class="rain" font-size="11" style="animation-duration:4.86s;animation-delay:-2.30s"><tspan x="348" dy="13" fill="#00ff41">1</tspan><tspan x="348" dy="13" fill="#2fbf3f">+</tspan><tspan x="348" dy="13" fill="#2fbf3f">]</tspan><tspan x="348" dy="13" fill="#2fbf3f">;</tspan><tspan x="348" dy="13" fill="#2fbf3f">F</tspan><tspan x="348" dy="13" fill="#2fbf3f">ｶ</tspan><tspan x="348" dy="13" fill="#2fbf3f">&amp;</tspan><tspan x="348" dy="13" fill="#2fbf3f">/</tspan><tspan x="348" dy="13" fill="#2fbf3f">ｱ</tspan><tspan x="348" dy="13" fill="#2fbf3f">C</tspan><tspan x="348" dy="13" fill="#2fbf3f">|</tspan><tspan x="348" dy="13" fill="#2fbf3f">1</tspan><tspan x="348" dy="13" fill="#2fbf3f">ｳ</tspan><tspan x="348" dy="13" fill="#2fbf3f">/</tspan><tspan x="348" dy="13" fill="#2fbf3f">ｱ</tspan></text>
+<text class="rain" font-size="11" style="animation-duration:6.70s;animation-delay:-5.92s"><tspan x="363" dy="13" fill="#00ff41">B</tspan><tspan x="363" dy="13" fill="#2fbf3f">]</tspan><tspan x="363" dy="13" fill="#2fbf3f">9</tspan><tspan x="363" dy="13" fill="#2fbf3f">;</tspan><tspan x="363" dy="13" fill="#2fbf3f">8</tspan><tspan x="363" dy="13" fill="#2fbf3f">ｸ</tspan><tspan x="363" dy="13" fill="#2fbf3f">]</tspan><tspan x="363" dy="13" fill="#2fbf3f">ｴ</tspan><tspan x="363" dy="13" fill="#2fbf3f">:</tspan><tspan x="363" dy="13" fill="#2fbf3f">1</tspan><tspan x="363" dy="13" fill="#2fbf3f">ｷ</tspan><tspan x="363" dy="13" fill="#2fbf3f">C</tspan><tspan x="363" dy="13" fill="#2fbf3f">ｱ</tspan><tspan x="363" dy="13" fill="#2fbf3f">0</tspan><tspan x="363" dy="13" fill="#2fbf3f">]</tspan><tspan x="363" dy="13" fill="#2fbf3f">]</tspan><tspan x="363" dy="13" fill="#2fbf3f">ｴ</tspan><tspan x="363" dy="13" fill="#2fbf3f">D</tspan><tspan x="363" dy="13" fill="#2fbf3f">*</tspan><tspan x="363" dy="13" fill="#2fbf3f">&amp;</tspan><tspan x="363" dy="13" fill="#2fbf3f">8</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:7.46s;animation-delay:-1.91s"><tspan x="381" dy="14" fill="#00ff41">&lt;</tspan><tspan x="381" dy="14" fill="#2fbf3f">|</tspan><tspan x="381" dy="14" fill="#2fbf3f">1</tspan><tspan x="381" dy="14" fill="#2fbf3f">8</tspan><tspan x="381" dy="14" fill="#2fbf3f">ｴ</tspan><tspan x="381" dy="14" fill="#2fbf3f">}</tspan><tspan x="381" dy="14" fill="#2fbf3f">ｸ</tspan><tspan x="381" dy="14" fill="#2fbf3f">%</tspan><tspan x="381" dy="14" fill="#2fbf3f">&lt;</tspan><tspan x="381" dy="14" fill="#2fbf3f">A</tspan><tspan x="381" dy="14" fill="#2fbf3f">8</tspan><tspan x="381" dy="14" fill="#2fbf3f">+</tspan><tspan x="381" dy="14" fill="#2fbf3f">=</tspan><tspan x="381" dy="14" fill="#2fbf3f">%</tspan><tspan x="381" dy="14" fill="#2fbf3f">ｷ</tspan><tspan x="381" dy="14" fill="#2fbf3f">:</tspan><tspan x="381" dy="14" fill="#2fbf3f">|</tspan><tspan x="381" dy="14" fill="#2fbf3f">%</tspan><tspan x="381" dy="14" fill="#2fbf3f">D</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:6.76s;animation-delay:-6.13s"><tspan x="401" dy="14" fill="#00ff41">C</tspan><tspan x="401" dy="14" fill="#2fbf3f">&gt;</tspan><tspan x="401" dy="14" fill="#2fbf3f">;</tspan><tspan x="401" dy="14" fill="#2fbf3f">1</tspan><tspan x="401" dy="14" fill="#2fbf3f">0</tspan><tspan x="401" dy="14" fill="#2fbf3f">$</tspan><tspan x="401" dy="14" fill="#2fbf3f">[</tspan><tspan x="401" dy="14" fill="#2fbf3f">7</tspan><tspan x="401" dy="14" fill="#2fbf3f">C</tspan><tspan x="401" dy="14" fill="#2fbf3f">0</tspan><tspan x="401" dy="14" fill="#2fbf3f">ｶ</tspan><tspan x="401" dy="14" fill="#2fbf3f">F</tspan><tspan x="401" dy="14" fill="#2fbf3f">ｳ</tspan><tspan x="401" dy="14" fill="#2fbf3f">ｳ</tspan><tspan x="401" dy="14" fill="#2fbf3f">ｵ</tspan><tspan x="401" dy="14" fill="#2fbf3f">0</tspan><tspan x="401" dy="14" fill="#2fbf3f">ｲ</tspan><tspan x="401" dy="14" fill="#2fbf3f">8</tspan><tspan x="401" dy="14" fill="#2fbf3f">*</tspan></text>
+<text class="rain" font-size="11" style="animation-duration:6.65s;animation-delay:-1.05s"><tspan x="422" dy="13" fill="#00ff41">}</tspan><tspan x="422" dy="13" fill="#2fbf3f">6</tspan><tspan x="422" dy="13" fill="#2fbf3f">&lt;</tspan><tspan x="422" dy="13" fill="#2fbf3f">ｷ</tspan><tspan x="422" dy="13" fill="#2fbf3f">&lt;</tspan><tspan x="422" dy="13" fill="#2fbf3f">B</tspan><tspan x="422" dy="13" fill="#2fbf3f">ｱ</tspan><tspan x="422" dy="13" fill="#2fbf3f">&lt;</tspan><tspan x="422" dy="13" fill="#2fbf3f">}</tspan><tspan x="422" dy="13" fill="#2fbf3f">ｸ</tspan><tspan x="422" dy="13" fill="#2fbf3f">|</tspan><tspan x="422" dy="13" fill="#2fbf3f">*</tspan><tspan x="422" dy="13" fill="#2fbf3f">8</tspan><tspan x="422" dy="13" fill="#2fbf3f">*</tspan><tspan x="422" dy="13" fill="#2fbf3f">}</tspan><tspan x="422" dy="13" fill="#2fbf3f">1</tspan><tspan x="422" dy="13" fill="#2fbf3f">1</tspan><tspan x="422" dy="13" fill="#2fbf3f">ｱ</tspan><tspan x="422" dy="13" fill="#2fbf3f">ｱ</tspan><tspan x="422" dy="13" fill="#2fbf3f">}</tspan><tspan x="422" dy="13" fill="#2fbf3f">&lt;</tspan></text>
+<text class="rain" font-size="13" style="animation-duration:7.07s;animation-delay:-2.28s"><tspan x="439" dy="15" fill="#00ff41">&gt;</tspan><tspan x="439" dy="15" fill="#2fbf3f">D</tspan><tspan x="439" dy="15" fill="#2fbf3f">&gt;</tspan><tspan x="439" dy="15" fill="#2fbf3f">ｴ</tspan><tspan x="439" dy="15" fill="#2fbf3f">6</tspan><tspan x="439" dy="15" fill="#2fbf3f">ｳ</tspan><tspan x="439" dy="15" fill="#2fbf3f">#</tspan><tspan x="439" dy="15" fill="#2fbf3f">ｲ</tspan><tspan x="439" dy="15" fill="#2fbf3f">0</tspan><tspan x="439" dy="15" fill="#2fbf3f">ｵ</tspan><tspan x="439" dy="15" fill="#2fbf3f">0</tspan><tspan x="439" dy="15" fill="#2fbf3f">ｷ</tspan><tspan x="439" dy="15" fill="#2fbf3f">A</tspan><tspan x="439" dy="15" fill="#2fbf3f">;</tspan><tspan x="439" dy="15" fill="#2fbf3f">ｶ</tspan></text>
+<text class="rain" font-size="13" style="animation-duration:7.67s;animation-delay:-0.70s"><tspan x="458" dy="15" fill="#00ff41">1</tspan><tspan x="458" dy="15" fill="#2fbf3f">6</tspan><tspan x="458" dy="15" fill="#2fbf3f">8</tspan><tspan x="458" dy="15" fill="#2fbf3f">|</tspan><tspan x="458" dy="15" fill="#2fbf3f">&lt;</tspan><tspan x="458" dy="15" fill="#2fbf3f">&lt;</tspan><tspan x="458" dy="15" fill="#2fbf3f">=</tspan><tspan x="458" dy="15" fill="#2fbf3f">&amp;</tspan><tspan x="458" dy="15" fill="#2fbf3f">0</tspan><tspan x="458" dy="15" fill="#2fbf3f">=</tspan><tspan x="458" dy="15" fill="#2fbf3f">ｲ</tspan><tspan x="458" dy="15" fill="#2fbf3f">C</tspan><tspan x="458" dy="15" fill="#2fbf3f">:</tspan><tspan x="458" dy="15" fill="#2fbf3f">A</tspan><tspan x="458" dy="15" fill="#2fbf3f">|</tspan><tspan x="458" dy="15" fill="#2fbf3f">ｳ</tspan><tspan x="458" dy="15" fill="#2fbf3f">7</tspan><tspan x="458" dy="15" fill="#2fbf3f">D</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:3.80s;animation-delay:-3.13s"><tspan x="473" dy="14" fill="#00ff41">]</tspan><tspan x="473" dy="14" fill="#2fbf3f">;</tspan><tspan x="473" dy="14" fill="#2fbf3f">0</tspan><tspan x="473" dy="14" fill="#2fbf3f">ｶ</tspan><tspan x="473" dy="14" fill="#2fbf3f">6</tspan><tspan x="473" dy="14" fill="#2fbf3f">D</tspan><tspan x="473" dy="14" fill="#2fbf3f">&lt;</tspan><tspan x="473" dy="14" fill="#2fbf3f">0</tspan><tspan x="473" dy="14" fill="#2fbf3f">&gt;</tspan><tspan x="473" dy="14" fill="#2fbf3f">{</tspan><tspan x="473" dy="14" fill="#2fbf3f">&lt;</tspan><tspan x="473" dy="14" fill="#2fbf3f">%</tspan><tspan x="473" dy="14" fill="#2fbf3f">B</tspan><tspan x="473" dy="14" fill="#2fbf3f">%</tspan><tspan x="473" dy="14" fill="#2fbf3f">0</tspan><tspan x="473" dy="14" fill="#2fbf3f">D</tspan><tspan x="473" dy="14" fill="#2fbf3f">}</tspan><tspan x="473" dy="14" fill="#2fbf3f">E</tspan><tspan x="473" dy="14" fill="#2fbf3f">1</tspan><tspan x="473" dy="14" fill="#2fbf3f">ｸ</tspan><tspan x="473" dy="14" fill="#2fbf3f">ｲ</tspan><tspan x="473" dy="14" fill="#2fbf3f">6</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:8.35s;animation-delay:-1.87s"><tspan x="492" dy="14" fill="#00ff41">[</tspan><tspan x="492" dy="14" fill="#2fbf3f">:</tspan><tspan x="492" dy="14" fill="#2fbf3f">C</tspan><tspan x="492" dy="14" fill="#2fbf3f">F</tspan><tspan x="492" dy="14" fill="#2fbf3f">ｴ</tspan><tspan x="492" dy="14" fill="#2fbf3f">+</tspan><tspan x="492" dy="14" fill="#2fbf3f">0</tspan><tspan x="492" dy="14" fill="#2fbf3f">0</tspan><tspan x="492" dy="14" fill="#2fbf3f">0</tspan><tspan x="492" dy="14" fill="#2fbf3f">/</tspan><tspan x="492" dy="14" fill="#2fbf3f">*</tspan><tspan x="492" dy="14" fill="#2fbf3f">0</tspan><tspan x="492" dy="14" fill="#2fbf3f">$</tspan><tspan x="492" dy="14" fill="#2fbf3f">0</tspan><tspan x="492" dy="14" fill="#2fbf3f">ｲ</tspan><tspan x="492" dy="14" fill="#2fbf3f">1</tspan><tspan x="492" dy="14" fill="#2fbf3f">}</tspan><tspan x="492" dy="14" fill="#2fbf3f">=</tspan></text>
+<text class="rain" font-size="11" style="animation-duration:5.19s;animation-delay:-3.55s"><tspan x="512" dy="13" fill="#00ff41">8</tspan><tspan x="512" dy="13" fill="#2fbf3f">1</tspan><tspan x="512" dy="13" fill="#2fbf3f">1</tspan><tspan x="512" dy="13" fill="#2fbf3f">[</tspan><tspan x="512" dy="13" fill="#2fbf3f">]</tspan><tspan x="512" dy="13" fill="#2fbf3f">{</tspan><tspan x="512" dy="13" fill="#2fbf3f">F</tspan><tspan x="512" dy="13" fill="#2fbf3f">}</tspan><tspan x="512" dy="13" fill="#2fbf3f">&gt;</tspan><tspan x="512" dy="13" fill="#2fbf3f">6</tspan><tspan x="512" dy="13" fill="#2fbf3f">ｷ</tspan><tspan x="512" dy="13" fill="#2fbf3f">ｷ</tspan><tspan x="512" dy="13" fill="#2fbf3f">[</tspan><tspan x="512" dy="13" fill="#2fbf3f">1</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:7.07s;animation-delay:-0.38s"><tspan x="533" dy="14" fill="#00ff41">C</tspan><tspan x="533" dy="14" fill="#2fbf3f">[</tspan><tspan x="533" dy="14" fill="#2fbf3f">0</tspan><tspan x="533" dy="14" fill="#2fbf3f">%</tspan><tspan x="533" dy="14" fill="#2fbf3f">}</tspan><tspan x="533" dy="14" fill="#2fbf3f">&lt;</tspan><tspan x="533" dy="14" fill="#2fbf3f">A</tspan><tspan x="533" dy="14" fill="#2fbf3f">|</tspan><tspan x="533" dy="14" fill="#2fbf3f">0</tspan><tspan x="533" dy="14" fill="#2fbf3f">ｳ</tspan><tspan x="533" dy="14" fill="#2fbf3f">ｴ</tspan><tspan x="533" dy="14" fill="#2fbf3f">ｲ</tspan><tspan x="533" dy="14" fill="#2fbf3f">%</tspan><tspan x="533" dy="14" fill="#2fbf3f">7</tspan><tspan x="533" dy="14" fill="#2fbf3f">;</tspan><tspan x="533" dy="14" fill="#2fbf3f">ｶ</tspan><tspan x="533" dy="14" fill="#2fbf3f">C</tspan><tspan x="533" dy="14" fill="#2fbf3f">1</tspan><tspan x="533" dy="14" fill="#2fbf3f">*</tspan><tspan x="533" dy="14" fill="#2fbf3f">B</tspan></text>
+<text class="rain" font-size="11" style="animation-duration:6.75s;animation-delay:-4.26s"><tspan x="553" dy="13" fill="#00ff41">0</tspan><tspan x="553" dy="13" fill="#2fbf3f">0</tspan><tspan x="553" dy="13" fill="#2fbf3f">B</tspan><tspan x="553" dy="13" fill="#2fbf3f">E</tspan><tspan x="553" dy="13" fill="#2fbf3f">+</tspan><tspan x="553" dy="13" fill="#2fbf3f">E</tspan><tspan x="553" dy="13" fill="#2fbf3f">0</tspan><tspan x="553" dy="13" fill="#2fbf3f">:</tspan><tspan x="553" dy="13" fill="#2fbf3f">0</tspan><tspan x="553" dy="13" fill="#2fbf3f">ｳ</tspan><tspan x="553" dy="13" fill="#2fbf3f">ｱ</tspan><tspan x="553" dy="13" fill="#2fbf3f">D</tspan><tspan x="553" dy="13" fill="#2fbf3f">}</tspan><tspan x="553" dy="13" fill="#2fbf3f">ｵ</tspan><tspan x="553" dy="13" fill="#2fbf3f">&amp;</tspan><tspan x="553" dy="13" fill="#2fbf3f">;</tspan><tspan x="553" dy="13" fill="#2fbf3f">1</tspan><tspan x="553" dy="13" fill="#2fbf3f">}</tspan><tspan x="553" dy="13" fill="#2fbf3f">F</tspan><tspan x="553" dy="13" fill="#2fbf3f">8</tspan><tspan x="553" dy="13" fill="#2fbf3f">ｲ</tspan><tspan x="553" dy="13" fill="#2fbf3f">0</tspan></text>
+<text class="rain" font-size="13" style="animation-duration:6.68s;animation-delay:-2.91s"><tspan x="572" dy="15" fill="#00ff41">0</tspan><tspan x="572" dy="15" fill="#2fbf3f">#</tspan><tspan x="572" dy="15" fill="#2fbf3f">ｷ</tspan><tspan x="572" dy="15" fill="#2fbf3f">0</tspan><tspan x="572" dy="15" fill="#2fbf3f">#</tspan><tspan x="572" dy="15" fill="#2fbf3f">ｱ</tspan><tspan x="572" dy="15" fill="#2fbf3f">ｸ</tspan><tspan x="572" dy="15" fill="#2fbf3f">E</tspan><tspan x="572" dy="15" fill="#2fbf3f">|</tspan><tspan x="572" dy="15" fill="#2fbf3f">ｴ</tspan><tspan x="572" dy="15" fill="#2fbf3f">|</tspan><tspan x="572" dy="15" fill="#2fbf3f">:</tspan><tspan x="572" dy="15" fill="#2fbf3f">ｲ</tspan><tspan x="572" dy="15" fill="#2fbf3f">B</tspan><tspan x="572" dy="15" fill="#2fbf3f">A</tspan></text>
+<text class="rain" font-size="11" style="animation-duration:3.87s;animation-delay:-2.81s"><tspan x="589" dy="13" fill="#00ff41">*</tspan><tspan x="589" dy="13" fill="#2fbf3f">]</tspan><tspan x="589" dy="13" fill="#2fbf3f">%</tspan><tspan x="589" dy="13" fill="#2fbf3f">*</tspan><tspan x="589" dy="13" fill="#2fbf3f">]</tspan><tspan x="589" dy="13" fill="#2fbf3f">ｳ</tspan><tspan x="589" dy="13" fill="#2fbf3f">:</tspan><tspan x="589" dy="13" fill="#2fbf3f">1</tspan><tspan x="589" dy="13" fill="#2fbf3f">A</tspan><tspan x="589" dy="13" fill="#2fbf3f">6</tspan><tspan x="589" dy="13" fill="#2fbf3f">ｴ</tspan><tspan x="589" dy="13" fill="#2fbf3f">ｸ</tspan><tspan x="589" dy="13" fill="#2fbf3f">1</tspan><tspan x="589" dy="13" fill="#2fbf3f">|</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:4.97s;animation-delay:-0.41s"><tspan x="610" dy="14" fill="#00ff41">6</tspan><tspan x="610" dy="14" fill="#2fbf3f">B</tspan><tspan x="610" dy="14" fill="#2fbf3f">}</tspan><tspan x="610" dy="14" fill="#2fbf3f">A</tspan><tspan x="610" dy="14" fill="#2fbf3f">8</tspan><tspan x="610" dy="14" fill="#2fbf3f">8</tspan><tspan x="610" dy="14" fill="#2fbf3f">&gt;</tspan><tspan x="610" dy="14" fill="#2fbf3f">0</tspan><tspan x="610" dy="14" fill="#2fbf3f">E</tspan><tspan x="610" dy="14" fill="#2fbf3f">ｴ</tspan><tspan x="610" dy="14" fill="#2fbf3f">;</tspan><tspan x="610" dy="14" fill="#2fbf3f">ｸ</tspan><tspan x="610" dy="14" fill="#2fbf3f">$</tspan><tspan x="610" dy="14" fill="#2fbf3f">#</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:8.16s;animation-delay:-7.55s"><tspan x="628" dy="14" fill="#00ff41">0</tspan><tspan x="628" dy="14" fill="#2fbf3f">}</tspan><tspan x="628" dy="14" fill="#2fbf3f">1</tspan><tspan x="628" dy="14" fill="#2fbf3f">&amp;</tspan><tspan x="628" dy="14" fill="#2fbf3f">$</tspan><tspan x="628" dy="14" fill="#2fbf3f">E</tspan><tspan x="628" dy="14" fill="#2fbf3f">C</tspan><tspan x="628" dy="14" fill="#2fbf3f">]</tspan><tspan x="628" dy="14" fill="#2fbf3f">E</tspan><tspan x="628" dy="14" fill="#2fbf3f">0</tspan><tspan x="628" dy="14" fill="#2fbf3f">9</tspan><tspan x="628" dy="14" fill="#2fbf3f">=</tspan><tspan x="628" dy="14" fill="#2fbf3f">ｵ</tspan><tspan x="628" dy="14" fill="#2fbf3f">A</tspan><tspan x="628" dy="14" fill="#2fbf3f">|</tspan><tspan x="628" dy="14" fill="#2fbf3f">ｸ</tspan><tspan x="628" dy="14" fill="#2fbf3f">ｶ</tspan><tspan x="628" dy="14" fill="#2fbf3f">ｲ</tspan><tspan x="628" dy="14" fill="#2fbf3f">6</tspan><tspan x="628" dy="14" fill="#2fbf3f">ｷ</tspan><tspan x="628" dy="14" fill="#2fbf3f">%</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:6.95s;animation-delay:-1.59s"><tspan x="649" dy="14" fill="#00ff41">%</tspan><tspan x="649" dy="14" fill="#2fbf3f">]</tspan><tspan x="649" dy="14" fill="#2fbf3f">0</tspan><tspan x="649" dy="14" fill="#2fbf3f">ｳ</tspan><tspan x="649" dy="14" fill="#2fbf3f">ｱ</tspan><tspan x="649" dy="14" fill="#2fbf3f">#</tspan><tspan x="649" dy="14" fill="#2fbf3f">9</tspan><tspan x="649" dy="14" fill="#2fbf3f">ｴ</tspan><tspan x="649" dy="14" fill="#2fbf3f">&gt;</tspan><tspan x="649" dy="14" fill="#2fbf3f">{</tspan><tspan x="649" dy="14" fill="#2fbf3f">]</tspan><tspan x="649" dy="14" fill="#2fbf3f">ｷ</tspan><tspan x="649" dy="14" fill="#2fbf3f">E</tspan><tspan x="649" dy="14" fill="#2fbf3f">;</tspan><tspan x="649" dy="14" fill="#2fbf3f">ｶ</tspan><tspan x="649" dy="14" fill="#2fbf3f">0</tspan><tspan x="649" dy="14" fill="#2fbf3f">|</tspan><tspan x="649" dy="14" fill="#2fbf3f">7</tspan><tspan x="649" dy="14" fill="#2fbf3f">9</tspan><tspan x="649" dy="14" fill="#2fbf3f">9</tspan><tspan x="649" dy="14" fill="#2fbf3f">1</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:3.56s;animation-delay:-2.90s"><tspan x="668" dy="14" fill="#00ff41">=</tspan><tspan x="668" dy="14" fill="#2fbf3f">|</tspan><tspan x="668" dy="14" fill="#2fbf3f">&amp;</tspan><tspan x="668" dy="14" fill="#2fbf3f">ｲ</tspan><tspan x="668" dy="14" fill="#2fbf3f">+</tspan><tspan x="668" dy="14" fill="#2fbf3f">/</tspan><tspan x="668" dy="14" fill="#2fbf3f">&amp;</tspan><tspan x="668" dy="14" fill="#2fbf3f">&gt;</tspan><tspan x="668" dy="14" fill="#2fbf3f">ｴ</tspan><tspan x="668" dy="14" fill="#2fbf3f">$</tspan><tspan x="668" dy="14" fill="#2fbf3f">+</tspan><tspan x="668" dy="14" fill="#2fbf3f">*</tspan><tspan x="668" dy="14" fill="#2fbf3f">ｷ</tspan><tspan x="668" dy="14" fill="#2fbf3f">|</tspan><tspan x="668" dy="14" fill="#2fbf3f">/</tspan><tspan x="668" dy="14" fill="#2fbf3f">6</tspan><tspan x="668" dy="14" fill="#2fbf3f">%</tspan></text>
+<text class="rain" font-size="13" style="animation-duration:4.67s;animation-delay:-1.35s"><tspan x="683" dy="15" fill="#00ff41">1</tspan><tspan x="683" dy="15" fill="#2fbf3f">8</tspan><tspan x="683" dy="15" fill="#2fbf3f">&lt;</tspan><tspan x="683" dy="15" fill="#2fbf3f">ｴ</tspan><tspan x="683" dy="15" fill="#2fbf3f">1</tspan><tspan x="683" dy="15" fill="#2fbf3f">ｵ</tspan><tspan x="683" dy="15" fill="#2fbf3f">]</tspan><tspan x="683" dy="15" fill="#2fbf3f">%</tspan><tspan x="683" dy="15" fill="#2fbf3f">7</tspan><tspan x="683" dy="15" fill="#2fbf3f">7</tspan><tspan x="683" dy="15" fill="#2fbf3f">ｵ</tspan><tspan x="683" dy="15" fill="#2fbf3f">0</tspan><tspan x="683" dy="15" fill="#2fbf3f">:</tspan><tspan x="683" dy="15" fill="#2fbf3f">ｶ</tspan><tspan x="683" dy="15" fill="#2fbf3f">]</tspan><tspan x="683" dy="15" fill="#2fbf3f">/</tspan><tspan x="683" dy="15" fill="#2fbf3f">1</tspan><tspan x="683" dy="15" fill="#2fbf3f">7</tspan><tspan x="683" dy="15" fill="#2fbf3f">&amp;</tspan><tspan x="683" dy="15" fill="#2fbf3f">;</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:8.18s;animation-delay:-1.80s"><tspan x="699" dy="14" fill="#00ff41">/</tspan><tspan x="699" dy="14" fill="#2fbf3f">%</tspan><tspan x="699" dy="14" fill="#2fbf3f">8</tspan><tspan x="699" dy="14" fill="#2fbf3f">/</tspan><tspan x="699" dy="14" fill="#2fbf3f">[</tspan><tspan x="699" dy="14" fill="#2fbf3f">&lt;</tspan><tspan x="699" dy="14" fill="#2fbf3f">D</tspan><tspan x="699" dy="14" fill="#2fbf3f">1</tspan><tspan x="699" dy="14" fill="#2fbf3f">&amp;</tspan><tspan x="699" dy="14" fill="#2fbf3f">1</tspan><tspan x="699" dy="14" fill="#2fbf3f">B</tspan><tspan x="699" dy="14" fill="#2fbf3f">&lt;</tspan><tspan x="699" dy="14" fill="#2fbf3f">9</tspan><tspan x="699" dy="14" fill="#2fbf3f">ｷ</tspan><tspan x="699" dy="14" fill="#2fbf3f">]</tspan><tspan x="699" dy="14" fill="#2fbf3f">:</tspan><tspan x="699" dy="14" fill="#2fbf3f">$</tspan><tspan x="699" dy="14" fill="#2fbf3f">/</tspan><tspan x="699" dy="14" fill="#2fbf3f">8</tspan><tspan x="699" dy="14" fill="#2fbf3f">&gt;</tspan><tspan x="699" dy="14" fill="#2fbf3f">D</tspan></text>
+<text class="rain" font-size="12" style="animation-duration:4.93s;animation-delay:-1.50s"><tspan x="715" dy="14" fill="#00ff41">1</tspan><tspan x="715" dy="14" fill="#2fbf3f">&amp;</tspan><tspan x="715" dy="14" fill="#2fbf3f">$</tspan><tspan x="715" dy="14" fill="#2fbf3f">1</tspan><tspan x="715" dy="14" fill="#2fbf3f">F</tspan><tspan x="715" dy="14" fill="#2fbf3f">F</tspan><tspan x="715" dy="14" fill="#2fbf3f">A</tspan><tspan x="715" dy="14" fill="#2fbf3f">0</tspan><tspan x="715" dy="14" fill="#2fbf3f">&amp;</tspan><tspan x="715" dy="14" fill="#2fbf3f">6</tspan><tspan x="715" dy="14" fill="#2fbf3f">$</tspan><tspan x="715" dy="14" fill="#2fbf3f">C</tspan><tspan x="715" dy="14" fill="#2fbf3f">ｸ</tspan><tspan x="715" dy="14" fill="#2fbf3f">:</tspan><tspan x="715" dy="14" fill="#2fbf3f">:</tspan><tspan x="715" dy="14" fill="#2fbf3f">6</tspan><tspan x="715" dy="14" fill="#2fbf3f">ｷ</tspan></text>
+<text class="rain" font-size="11" style="animation-duration:5.55s;animation-delay:-5.20s"><tspan x="736" dy="13" fill="#00ff41">8</tspan><tspan x="736" dy="13" fill="#2fbf3f">F</tspan><tspan x="736" dy="13" fill="#2fbf3f">*</tspan><tspan x="736" dy="13" fill="#2fbf3f">ｱ</tspan><tspan x="736" dy="13" fill="#2fbf3f">0</tspan><tspan x="736" dy="13" fill="#2fbf3f">{</tspan><tspan x="736" dy="13" fill="#2fbf3f">ｵ</tspan><tspan x="736" dy="13" fill="#2fbf3f">F</tspan><tspan x="736" dy="13" fill="#2fbf3f">&lt;</tspan><tspan x="736" dy="13" fill="#2fbf3f">&lt;</tspan><tspan x="736" dy="13" fill="#2fbf3f">ｴ</tspan><tspan x="736" dy="13" fill="#2fbf3f">&lt;</tspan><tspan x="736" dy="13" fill="#2fbf3f">*</tspan><tspan x="736" dy="13" fill="#2fbf3f">F</tspan><tspan x="736" dy="13" fill="#2fbf3f">1</tspan><tspan x="736" dy="13" fill="#2fbf3f">A</tspan><tspan x="736" dy="13" fill="#2fbf3f">0</tspan></text>
+  </g>
+  
+  <g clip-path="url(#panel-clip)" opacity="0.25">
+    <text y="98" class="stream" font-size="11"
+      style="animation:stream-0 15.7s linear infinite">28 B8 7D 14 92 38 BC CA 0E AE 02 E9 F4 F8 40 4A D4 98 9A 7F 39 77 02 2F 65 33 C6 C7    28 B8 7D 14 92 38 BC CA 0E AE 02 E9 F4 F8 40 4A D4 98 9A 7F 39 77 02 2F 65 33 C6 C7</text>
+  </g>
+  <style>
+    @keyframes stream-0 {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+  </style>
+  <g clip-path="url(#panel-clip)" opacity="0.25">
+    <text y="132" class="stream" font-size="11"
+      style="animation:stream-1 18.0s linear infinite">C9 94 04 CF 72 B8 F3 A8 D4 85 11 D5 68 74 A7 62 9C 38 02 8C 71 04 2A 03 FE 1C D5 9E    C9 94 04 CF 72 B8 F3 A8 D4 85 11 D5 68 74 A7 62 9C 38 02 8C 71 04 2A 03 FE 1C D5 9E</text>
+  </g>
+  <style>
+    @keyframes stream-1 {
+      from { transform: translateX(0); }
+      to { transform: translateX(50%); }
+    }
+  </style>
+  <g clip-path="url(#panel-clip)" opacity="0.25">
+    <text y="152" class="stream" font-size="11"
+      style="animation:stream-2 20.1s linear infinite">BC A6 D9 AC C0 DD E8 24 1E D7 06 89 CC 9A 77 50 63 BC A6 A3 A8 13 DD 58 E1 63 DC B6    BC A6 D9 AC C0 DD E8 24 1E D7 06 89 CC 9A 77 50 63 BC A6 A3 A8 13 DD 58 E1 63 DC B6</text>
+  </g>
+  <style>
+    @keyframes stream-2 {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+  </style>
+
+  <!-- CRT vignette + moving scanline -->
+  <rect x="0" y="30" width="760" height="180" fill="url(#vign)" pointer-events="none" />
+  <g clip-path="url(#panel-clip)">
+    <rect class="scanline" x="0" y="0" width="760" height="14" fill="url(#scanfade)" />
+  </g>
+
+  <!-- Title bar -->
   <path class="titlebar" d="M0 10 A10 10 0 0 1 10 0 L750 0 A10 10 0 0 1 760 10 L760 30 L0 30 Z" />
   <circle cx="22" cy="15" r="6" fill="#ff5f56" />
   <circle cx="42" cy="15" r="6" fill="#ffbd2e" />
   <circle cx="62" cy="15" r="6" fill="#27c93f" />
-  <text x="380" y="19" text-anchor="middle" class="titletext">shreyas@bengaluru: ~</text>
+  <text x="380" y="19" text-anchor="middle" class="titletext">shreyas@bengaluru: ~ — root access granted</text>
   <rect class="border" x="0.5" y="0.5" width="759" height="209" rx="10" />
 
-  <clipPath id="ticker-clip">
-    <rect x="30" y="42" width="700" height="18" />
-  </clipPath>
+  <!-- Scrolling tech ticker -->
   <g clip-path="url(#ticker-clip)">
     <text x="30" y="55" class="ticker-track">Java    /    Spring Boot    /    Kafka    /    gRPC    /    PostgreSQL    /    Redis    /    Docker    /    React    /    Spring AI    /    AWS    /    Java    /    Spring Boot    /    Kafka    /    gRPC    /    PostgreSQL    /    Redis    /    Docker    /    React    /    Spring AI    /    AWS</text>
   </g>
 
-  <text x="30" y="88" class="prompt">$ whoami</text>
-  <text x="30" y="120" class="name">Shreyas<tspan class="cursor">_</tspan></text>
+  <!-- Foreground content -->
+  <g class="flicker">
+    <text x="30" y="88" class="prompt">$ whoami</text>
+    <g class="glitch">
+      <text x="30" y="120" class="glitch-b name">Shreyas</text>
+      <text x="30" y="120" class="glitch-r name">Shreyas</text>
+      <text x="30" y="120" class="name">Shreyas<tspan class="cursor">_</tspan></text>
+    </g>
 
-  <text x="30" y="150" class="role role-0">&gt; Backend Engineer in training</text><text x="30" y="150" class="role role-1">&gt; Spring Boot / Kafka / Distributed Systems</text><text x="30" y="150" class="role role-2">&gt; CSE (AI/ML) @ RIT Bengaluru</text><text x="30" y="150" class="role role-3">&gt; 650+ DSA problems solved</text>
+    <text x="30" y="150" class="role role-0">&gt; Backend Engineer in training</text><text x="30" y="150" class="role role-1">&gt; Spring Boot / Kafka / Distributed Systems</text><text x="30" y="150" class="role role-2">&gt; CSE (AI/ML) @ RIT Bengaluru</text>
 
-  <line x1="30" y1="166" x2="730" y2="166" stroke="#1f2a1f" stroke-width="1" />
-
-  <text x="30" y="188" class="meta">Bengaluru, India   |   Software Engineer Intern, Hampi Labs</text>
-  <text x="30" y="206" class="meta">Monday, 20 July 2026</text>
+    <line x1="30" y1="166" x2="730" y2="166" stroke="#153015" stroke-width="1" />
+    <text x="30" y="188" class="meta">Bengaluru, India   |   Software Engineer Intern, Hampi Labs</text>
+    <text x="30" y="206" class="meta">Monday, 20 July 2026</text>
+  </g>
 </svg>
