@@ -43,15 +43,7 @@ $ cat about.txt
 
 **Backend & APIs**
 
-<img src="https://skillicons.dev/icons?i=spring" alt="Spring Boot" />
-<img src="https://img.shields.io/badge/Spring_Cloud-6DB33F?style=flat-square&logo=spring&logoColor=white" alt="Spring Cloud" />
-<img src="https://img.shields.io/badge/Spring_AI-6DB33F?style=flat-square&logo=spring&logoColor=white" alt="Spring AI" />
-<img src="https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white" alt="Spring Security" />
-<img src="https://img.shields.io/badge/Spring_Data_JPA-6DB33F?style=flat-square&logo=spring&logoColor=white" alt="Spring Data JPA" />
-<img src="https://img.shields.io/badge/REST_APIs-005571?style=flat-square" alt="REST APIs" />
-<img src="https://img.shields.io/badge/gRPC-4285F4?style=flat-square" alt="gRPC" />
-<img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT" />
-<img src="https://img.shields.io/badge/WebSockets-010101?style=flat-square" alt="WebSockets" />
+<img src="https://skillicons.dev/icons?i=spring" alt="Spring Boot" /> <img src="https://img.shields.io/badge/Spring_Cloud-6DB33F?style=flat-square&logo=spring&logoColor=white" alt="Spring Cloud" /> <img src="https://img.shields.io/badge/Spring_AI-6DB33F?style=flat-square&logo=spring&logoColor=white" alt="Spring AI" /> <img src="https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white" alt="Spring Security" /> <img src="https://img.shields.io/badge/Spring_Data_JPA-6DB33F?style=flat-square&logo=spring&logoColor=white" alt="Spring Data JPA" /> <img src="https://img.shields.io/badge/REST_APIs-005571?style=flat-square" alt="REST APIs" /> <img src="https://img.shields.io/badge/gRPC-4285F4?style=flat-square" alt="gRPC" /> <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT" /> <img src="https://img.shields.io/badge/WebSockets-010101?style=flat-square" alt="WebSockets" />
 
 **Messaging & Caching**
 
@@ -59,22 +51,15 @@ $ cat about.txt
 
 **Databases**
 
-<img src="https://skillicons.dev/icons?i=postgres,mongodb,mysql,cassandra" alt="PostgreSQL, MongoDB, MySQL, Cassandra" />
-<img src="https://img.shields.io/badge/Neo4j-4581C3?style=flat-square&logo=neo4j&logoColor=white" alt="Neo4j" />
-<img src="https://img.shields.io/badge/Apache_HBase-D22128?style=flat-square&logo=apache&logoColor=white" alt="Apache HBase" />
-<img src="https://img.shields.io/badge/Apache_Hive-FDEE21?style=flat-square&logo=apache&logoColor=black" alt="Apache Hive" />
+<img src="https://skillicons.dev/icons?i=postgres,mongodb,mysql,cassandra" alt="PostgreSQL, MongoDB, MySQL, Cassandra" /> <img src="https://img.shields.io/badge/Neo4j-4581C3?style=flat-square&logo=neo4j&logoColor=white" alt="Neo4j" /> <img src="https://img.shields.io/badge/Apache_HBase-D22128?style=flat-square&logo=apache&logoColor=white" alt="Apache HBase" /> <img src="https://img.shields.io/badge/Apache_Hive-FDEE21?style=flat-square&logo=apache&logoColor=black" alt="Apache Hive" />
 
 **AI & Agentic**
 
-<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" alt="LangChain" />
-<img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langgraph&logoColor=white" alt="LangGraph" />
+<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" alt="LangChain" /> <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langgraph&logoColor=white" alt="LangGraph" />
 
 **Cloud & DevOps**
 
-<img src="https://skillicons.dev/icons?i=docker,git,github" alt="Docker, Git, GitHub" />
-<img src="https://img.shields.io/badge/AWS_S3-569A31?style=flat-square&logo=amazons3&logoColor=white" alt="AWS S3" />
-<img src="https://img.shields.io/badge/AWS_EC2-FF9900?style=flat-square&logo=amazonec2&logoColor=white" alt="AWS EC2" />
-<img src="https://img.shields.io/badge/Railway-0B0D0E?style=flat-square&logo=railway&logoColor=white" alt="Railway" />
+<img src="https://skillicons.dev/icons?i=docker,git,github" alt="Docker, Git, GitHub" /> <img src="https://img.shields.io/badge/AWS_S3-569A31?style=flat-square&logo=amazons3&logoColor=white" alt="AWS S3" /> <img src="https://img.shields.io/badge/AWS_EC2-FF9900?style=flat-square&logo=amazonec2&logoColor=white" alt="AWS EC2" /> <img src="https://img.shields.io/badge/Railway-0B0D0E?style=flat-square&logo=railway&logoColor=white" alt="Railway" />
 
 ---
 
