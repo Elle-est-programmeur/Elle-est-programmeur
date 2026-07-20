@@ -67,10 +67,10 @@ $ cat about.txt
 
 | Project | Description | Stack |
 |---|---|---|
-| **[TradeSentry](https://github.com/Elle-est-programmeur)** | Distributed event-driven AML transaction monitoring platform - Kafka-based screening, risk scoring, and audit logging across independently scalable microservices | Java 21, Spring Boot, Kafka, gRPC, PostgreSQL, Redis, Docker |
-| **[MediSureAI](https://github.com/Elle-est-programmeur)** | Self-reflective agentic RAG platform for healthcare & insurance with multi-path reasoning, self-critique, and citation-backed synthesis (Ollama + Groq hybrid) | Spring Boot, Spring AI, PostgreSQL, pgvector, React |
-| **[HelpLens](https://github.com/Elle-est-programmeur)** | AI-powered crisis response platform for real-time shelter/hospital/route data with a natural-language assistant | Spring Boot, Spring AI, Spring Security, JWT |
-| **[Gmail AI Reply Extension](https://github.com/Elle-est-programmeur)** | Chrome extension adding an AI Reply button to Gmail, backed by a Spring Boot API calling the Gemini API | Spring Boot, Gemini API, Chrome Extension |
+| **[TradeSentry](https://github.com/Elle-est-programmeur/distributed-aml-platform)** | Distributed event-driven AML transaction monitoring platform - Kafka-based screening, risk scoring, and audit logging across independently scalable microservices | Java 21, Spring Boot, Kafka, gRPC, PostgreSQL, Redis, Docker |
+| **[MediSureAI](https://github.com/Elle-est-programmeur/MediSureAI)** | Self-reflective agentic RAG platform for healthcare & insurance with multi-path reasoning, self-critique, and citation-backed synthesis (Ollama + Groq hybrid) | Spring Boot, Spring AI, PostgreSQL, pgvector, React |
+| **[HelpLens](https://github.com/Elle-est-programmeur/HelpCrisis)** | AI-powered crisis response platform for real-time shelter/hospital/route data with a natural-language assistant | Spring Boot, Spring AI, Spring Security, JWT |
+| **[Gmail AI Reply Extension](https://github.com/Elle-est-programmeur/Email_response-generator)** | Chrome extension adding an AI Reply button to Gmail, backed by a Spring Boot API calling the Gemini API | Spring Boot, Gemini API, Chrome Extension |
 
 MediSureAI was published at SYNERGY 2026 (IC-SIIT) and is set to appear in a Scopus-indexed journal (Taylor & Francis, CRC Press).
 
