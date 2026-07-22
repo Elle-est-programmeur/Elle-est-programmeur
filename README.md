@@ -1,14 +1,14 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Elle-est-programmeur/Elle-est-programmeur/main/dark_mode.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Elle-est-programmeur/Elle-est-programmeur/main/light_mode.svg">
-  <img alt="Shreyas's GitHub profile banner" src="https://raw.githubusercontent.com/Elle-est-programmeur/Elle-est-programmeur/main/light_mode.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ShreyasOpX/ShreyasOpX/main/dark_mode.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ShreyasOpX/ShreyasOpX/main/light_mode.svg">
+  <img alt="Shreyas's GitHub profile banner" src="https://raw.githubusercontent.com/ShreyasOpX/ShreyasOpX/main/light_mode.svg">
 </picture>
 
 <p align="center">
   <a href="#"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://github.com/Elle-est-programmeur"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://github.com/ShreyasOpX"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="https://leetcode.com/u/Phoenix1808/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
-  <img src="https://komarev.com/ghpvc/?username=Elle-est-programmeur&color=blueviolet&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=ShreyasOpX&color=blueviolet&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile views" />
 </p>
 
 ### `$ whoami`
@@ -67,10 +67,10 @@ $ cat about.txt
 
 | Project | Description | Stack |
 |---|---|---|
-| **[TradeSentry](https://github.com/Elle-est-programmeur/distributed-aml-platform)** | Distributed event-driven AML transaction monitoring platform - Kafka-based screening, risk scoring, and audit logging across independently scalable microservices | Java 21, Spring Boot, Kafka, gRPC, PostgreSQL, Redis, Docker |
-| **[MediSureAI](https://github.com/Elle-est-programmeur/MediSureAI)** | Self-reflective agentic RAG platform for healthcare & insurance with multi-path reasoning, self-critique, and citation-backed synthesis (Ollama + Groq hybrid) | Spring Boot, Spring AI, PostgreSQL, pgvector, React |
-| **[HelpLens](https://github.com/Elle-est-programmeur/HelpCrisis)** | AI-powered crisis response platform for real-time shelter/hospital/route data with a natural-language assistant | Spring Boot, Spring AI, Spring Security, JWT |
-| **[Gmail AI Reply Extension](https://github.com/Elle-est-programmeur/Email_response-generator)** | Chrome extension adding an AI Reply button to Gmail, backed by a Spring Boot API calling the Gemini API | Spring Boot, Gemini API, Chrome Extension |
+| **[TradeSentry](https://github.com/ShreyasOpX/distributed-aml-platform)** | Distributed event-driven AML transaction monitoring platform - Kafka-based screening, risk scoring, and audit logging across independently scalable microservices | Java 21, Spring Boot, Kafka, gRPC, PostgreSQL, Redis, Docker |
+| **[MediSureAI](https://github.com/ShreyasOpX/MediSureAI)** | Self-reflective agentic RAG platform for healthcare & insurance with multi-path reasoning, self-critique, and citation-backed synthesis (Ollama + Groq hybrid) | Spring Boot, Spring AI, PostgreSQL, pgvector, React |
+| **[HelpLens](https://github.com/ShreyasOpX/HelpCrisis)** | AI-powered crisis response platform for real-time shelter/hospital/route data with a natural-language assistant | Spring Boot, Spring AI, Spring Security, JWT |
+| **[Gmail AI Reply Extension](https://github.com/ShreyasOpX/Email_response-generator)** | Chrome extension adding an AI Reply button to Gmail, backed by a Spring Boot API calling the Gemini API | Spring Boot, Gemini API, Chrome Extension |
 
 MediSureAI was published at SYNERGY 2026 (IC-SIIT) and is set to appear in a Scopus-indexed journal (Taylor & Francis, CRC Press).
 
@@ -80,19 +80,19 @@ MediSureAI was published at SYNERGY 2026 (IC-SIIT) and is set to appear in a Sco
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Elle-est-programmeur/Elle-est-programmeur/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Elle-est-programmeur/Elle-est-programmeur/output/github-contribution-grid-snake.svg">
-    <img alt="Snake animation of the contribution graph" src="https://raw.githubusercontent.com/Elle-est-programmeur/Elle-est-programmeur/output/github-contribution-grid-snake.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ShreyasOpX/ShreyasOpX/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ShreyasOpX/ShreyasOpX/output/github-contribution-grid-snake.svg">
+    <img alt="Snake animation of the contribution graph" src="https://raw.githubusercontent.com/ShreyasOpX/ShreyasOpX/output/github-contribution-grid-snake.svg">
   </picture>
 </p>
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Elle-est-programmeur&show_icons=true&theme=dark&hide_border=true" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Elle-est-programmeur&layout=compact&hide_border=true&theme=dark" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=ShreyasOpX&show_icons=true&theme=dark&hide_border=true" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ShreyasOpX&layout=compact&hide_border=true&theme=dark" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Elle-est-programmeur&hide_border=true&theme=dark" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ShreyasOpX&hide_border=true&theme=dark" />
 </p>
 
 ---
@@ -100,7 +100,7 @@ MediSureAI was published at SYNERGY 2026 (IC-SIIT) and is set to appear in a Sco
 ### `$ cat activity.log`
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Elle-est-programmeur&theme=github-dark" alt="Contribution activity graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ShreyasOpX&theme=github-dark" alt="Contribution activity graph" />
 </p>
 
 ---
@@ -115,7 +115,7 @@ MediSureAI was published at SYNERGY 2026 (IC-SIIT) and is set to appear in a Sco
 
 ### `$ cat contact.txt`
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Elle-est-programmeur)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ShreyasOpX)
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=black)](https://leetcode.com/u/Phoenix1808/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](#)
 
